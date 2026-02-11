@@ -84,19 +84,18 @@ def get_db():
 # ── Comandi base ────────────────────────────────────────────────
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🥗 *Ciao! Sono il tuo Diet Reminder Bot!*\n\n"
+        "🥗 Ciao! Sono il tuo Diet Reminder Bot!\n\n"
         "Ecco cosa posso fare per te:\n\n"
-        "📋 *Gestione Pasti*\n"
+        "📋 Gestione Pasti\n"
         "/aggiungi_pasto — Programma un pasto\n"
         "/pasti — Vedi i pasti della settimana\n"
         "/elimina_pasto — Rimuovi un pasto\n\n"
-        "📊 *Tracking Progressi*\n"
+        "📊 Tracking Progressi\n"
         "/progresso — Registra peso e misure\n"
         "/storico — Vedi i tuoi progressi\n"
         "/impostazioni — Configura giorno/ora check-in\n\n"
-        "💡 *Tip*: Aggiungi i tuoi pasti e riceverai un "
+        "💡 Tip: Aggiungi i tuoi pasti e riceverai un "
         "reminder automatico qualche ora prima!",
-        parse_mode="Markdown",
     )
 
 
