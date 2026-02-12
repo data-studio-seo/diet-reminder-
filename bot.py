@@ -26,7 +26,10 @@ import sqlite3
 
 # ── Configurazione ──────────────────────────────────────────────
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "IL_TUO_TOKEN_QUI")
-DB_PATH = "diet_bot.db"
+
+# Usa /data se esiste (volume Railway), altrimenti cartella locale
+DATA_DIR = "/data" if os.path.isdir("/data") else "."
+DB_PATH = os.path.join(DATA_DIR, "diet_bot.db")
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
